@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Tron Waifus - ROI game on Tron Network where you can buy as many Waifus as you want</title>
+
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Investing in your own Tron Waifus and make hourly income">
+    <meta name="keywords" content="tron, waifus, anime, sexygirls, game">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tron Waifus - ROI game based on Tron Network blockchain">
+    <meta property="og:description" content="Investing in your own Tron Waifus and make hourly income">
+    <meta property="og:image" content="./images/icon_preview.jpg"/>
+
+    <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon">
+
+    <meta http-equiv="refresh" content="1;url=./en/">
+    <script>
+        (function (waifus) {
+            var locale;
+            if (navigator.languages && navigator.languages.length) {
+                // latest versions of Chrome and Firefox set this correctly
+                locale = navigator.languages[0]
+            } else if (navigator.userLanguage) {
+                // IE only
+                locale = navigator.userLanguage
+            } else {
+                // latest versions of Chrome, Firefox, and Safari set this correctly
+                locale = navigator.language
+            }
+            waifus(function (config) {
+                var list = config.languages.list;
+                for (var i = 0; i < list.length; i++) {
+                    if ((new RegExp(list[i])).test(locale)) {
+                        config.onDetect(list[i]);
+                        return;
+                    }
+                }
+                config.onDetect(config.languages.byDefault);
+            });
+        }(function (root) {
+            window.langDetector = root;
+        }));
+        langDetector({
+            languages: {
+                list: ['en'],
+                byDefault: 'en'
+            }
+        });
+    </script>
+</head>
+<body>
+If the page is not reloaded automatically, please follow the <a href="./en/">link</a>
+</body>
+</html>
